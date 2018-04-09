@@ -2,7 +2,7 @@
 Nuestro sitio web va a ser un portal de películas basado en IMDB (http://www.imdb.com).
 Te proporcionamos los siguientes datos previos para la realización general de la prueba:
  
-- Un listado de todas las películas en formato json (pelis.json). Es **tarea tuya convertirlo al formato que te resulte conveniente (para importación a base de datos relacional, por ejemplo)**.
+- Un listado de todas las películas en formato json (pelis.json). **Es tarea tuya convertirlo al formato que te resulte conveniente (para importación a base de datos relacional, por ejemplo)**.
 - El script de generación del listado y las instrucciones de uso del mismo por si te viene bien modificar algo.
 
 
