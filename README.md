@@ -14,14 +14,17 @@ Te recordamos que puedes usar las tecnologías (base de datos, lenguajes de prog
 
 ## Fechas y valoración de las pruebas
 **Módulo I:** ***Planificación, material gráfico y diseño web***
+
 -17 de Abril de 17:00 a 20:00 horas. 25% de la valoración final
 -De 16:00 a 17:00 h. Comprobación de herramientas y adaptación al puesto
 -De 17:00 a 20:00 h. Realizacin de la prueba
 
 **Módulo II:** ***Programación (frontend y backend) y base de datos***
+
 -18 de Abril de 10:00 a 14:00 horas y de 16:00 a 20:00 horas. 50% de la valoración final
 
 **Módulo III:** ***Tests, despliegue en servidor y control de versiones***
+
 -19 de Abril de 10:00 a 14:00 horas. 25% de la valoración final
 
 
