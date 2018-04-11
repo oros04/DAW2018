@@ -10,7 +10,7 @@ Te recordamos que puedes usar las tecnologías (base de datos, lenguajes de prog
 
 - **Realiza los pasos previos que te proporcionamos**. No esperes a hacer un trabajo previo al día del examen si puedes ya llevarlo preparado. Lleva así mismo una arquitectura tipo para tu aplicación, con las librerías que utilices, etc..
 
-- Para el último día que se hará el despliegue en un servidor es conveniente que tengas claro desde el primer día que tipo de máquina necesitas (Windows Server, Ubuntu 16...) y que tengas claros los paquetes que se deben instalar para que tu desarrollo funcione (servidor web, librerías...). Se utilizará virtualización mediante VMWare.
+- **Ten claro el despliegue de tu aplicacin en un servidor**. En el último módulo se hará el despliegue y es conveniente que tengas claro el tipo de máquina necesitas (Windows Server, Ubuntu 16...) y los paquetes que se deben instalar para que tu entorno funcione (servidor web, librerías, base de datos...). Se utilizará virtualización mediante VMWare y se proporcionarán máquinas vacías.
 
 ## Fechas y valoración de las pruebas
 **Módulo I: Planificación, material gráfico y diseño web**
