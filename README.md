@@ -28,6 +28,8 @@ Te recordamos que puedes usar las tecnologías (base de datos, lenguajes de prog
 ## Pasos previos
  - Para realizar la prueba necesitaremos unos datos para su visualización, en este caso será listado de películas en formato json. **Es tarea tuya convertirlo al formato que te resulte conveniente (para importación a base de datos relacional, por ejemplo)**. En la prueba del segundo día se trabajará el acceso a datos y esta conversión de los datos de prueba a la base de datos es un trabajo que puedes hacer ya y así ahorrar un tiempo valioso para la prueba.
  
+ - Realiza un fork de este repositorio. Será el repositorio que tu utilices y sobre el que nosotros haremos el seguimiento de tu prueba. Si no controlas a nivel básico git & github, mira algo de documentación.
+ 
 ### Script obtención datos para la prueba
 El script de generación del listado y las instrucciones de uso del mismo por si te viene bien modificar algo.
 Listado de las mejores películas en imdb. El resultado de la ejecución del script está en el fichero *pelis.json*
