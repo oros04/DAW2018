@@ -1,5 +1,6 @@
 # Introducción
 Nuestro sitio web va a ser un portal de películas basado en IMDB (http://www.imdb.com).
+
 Te recordamos que puedes usar las tecnologías (base de datos, lenguajes de programación y frameworks con los que te sientas más cómodo).
 
 ## Recomendaciones
