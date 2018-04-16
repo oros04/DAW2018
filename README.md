@@ -3,6 +3,14 @@ Nuestro sitio web va a ser un portal de películas basado en IMDB (http://www.im
 
 Te recordamos que puedes usar las tecnologías (base de datos, lenguajes de programación y frameworks con los que te sientas más cómodo).
 
+## Normas generales sobre la competición
+- El uso del móvil no está permitido.
+- Se puede hacer uso de Internet y de cualquier otra información que aporte el competidor para la realización de la prueba basada en apuntes/materiales/documentación, no mediante la solicitud de ayuda a través de un foro u otro canal de intercambio de información.
+- No está permitida la comunicación con otros competidores u otro personal externo mediante cualquier método (móvil, chat, internet…). 
+- Está permitido el uso de cascos o tapones para aislar del ruido.
+- El equipo del competidor estará monitorizado y la sesión de trabajo grabada por un sistema de gestión remota para evitar acciones contrarias a las normas de la competición.
+- El competidor puede consultar al jurado ante cualquier duda que se le plantee sobre si alguna acción está permitida o no.
+
 ## Recomendaciones
 - **Trae un portatil ya configurado** con tu editor preferido, base de datos, etc. La organización de cualquier forma facilitará un portatil, teclado, ratón y una pantalla adicional para la realización de la prueba.En el primer día de la prueba, se dispondrá de un tiempo cercano a una hora (16:00 a 17:00) para que cada usuario pueda configurarse su puesto.
 
@@ -10,7 +18,7 @@ Te recordamos que puedes usar las tecnologías (base de datos, lenguajes de prog
 
 - **Realiza los pasos previos que te proporcionamos**. No esperes a hacer un trabajo previo al día del examen si puedes ya llevarlo preparado. Lleva así mismo una arquitectura tipo para tu aplicación, con las librerías que utilices, etc..
 
-- **Ten claro el despliegue de tu aplicacin en un servidor**. En el último módulo se hará el despliegue y es conveniente que tengas claro el tipo de máquina necesitas (Windows Server, Ubuntu 16...) y los paquetes que se deben instalar para que tu entorno funcione (servidor web, librerías, base de datos...). Se utilizará virtualización mediante VMWare.
+- **Ten claro el despliegue de tu aplicación en un servidor**. En el último módulo se hará el despliegue y es conveniente que tengas claro el tipo de máquina necesitas (Windows Server, Ubuntu 16...) y los paquetes que se deben instalar para que tu entorno funcione (servidor web, librerías, base de datos...). Se utilizará virtualización mediante VMWare.
 
 ## Fechas y valoración de las pruebas
 **Módulo I:** ***Planificación, material gráfico y diseño web***
