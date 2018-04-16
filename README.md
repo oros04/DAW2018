@@ -10,6 +10,8 @@ Te recordamos que puedes usar las tecnologías (base de datos, lenguajes de prog
 - Está permitido el uso de cascos o tapones para aislar del ruido.
 - El equipo del competidor estará monitorizado y la sesión de trabajo grabada por un sistema de gestión remota para evitar acciones contrarias a las normas de la competición.
 - El competidor puede consultar al jurado ante cualquier duda que se le plantee sobre si alguna acción está permitida o no.
+- Disponéis de 20 minutos al inicio de cada módulo para la lectura de la prueba y planteamiento general de dudas
+  - Si surge un problema/aclaración de la prueba durante la competición se informará por igual a todos los participantes para estar en igualdad de condiciones.
 
 ## Recomendaciones
 - **Trae un portatil ya configurado** con tu editor preferido, base de datos, etc. La organización de cualquier forma facilitará un portatil, teclado, ratón y una pantalla adicional para la realización de la prueba.En el primer día de la prueba, se dispondrá de un tiempo cercano a una hora (16:00 a 17:00) para que cada usuario pueda configurarse su puesto.
