@@ -154,6 +154,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Informacion.cs" />
     <Compile Include="Models\Peliculas.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -206,6 +207,7 @@
       <DependentUpon>Peliculas.edmx</DependentUpon>
       <LastGenOutput>Peliculas1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\introPelis.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

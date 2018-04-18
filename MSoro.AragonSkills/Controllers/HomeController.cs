@@ -14,12 +14,36 @@ namespace MSoro_AragonSkills.Controllers
     {
         PeliculasBDEntities bd = new PeliculasBDEntities();
 
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            
+            if (id == 1)
+            {
+                return View(bd.Peliculas.ToList().OrderBy(d => d.nombre));
+
+            }
+            else if (id == 2)
+            {
+                return View(bd.Peliculas.ToList().OrderBy(d => d.año));
+            }
+            else if (id == 3)
+            {
+                return View(bd.Peliculas.ToList().OrderBy(d => d.rating));
+            }
+
+
             return View(bd.Peliculas.ToList());
         }
+       
+        public ActionResult Search(Informacion info)
+        {
+            
+            if (!String.IsNullOrEmpty(info.busqueda))
+            {
+                return View(bd.Peliculas.Where(s => s.nombre.Contains(info.busqueda)));
+            }
 
+            return View(bd.Peliculas.ToList());
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -45,7 +69,7 @@ namespace MSoro_AragonSkills.Controllers
                 return HttpNotFound();
             }
             ViewBag.url_imagen = "https://" + pelicula.url_foto;
-            ViewBag.url_pelicula = "https://www.imdb.com/"+pelicula.url_imbd;
+            ViewBag.url_pelicula = "https://www.imdb.com/" + pelicula.url_imbd;
             ViewBag.idPelicula = new SelectList(bd.Peliculas, "idPelicula", "nombre", pelicula.idPelicula);
             return View(pelicula);
         }
@@ -57,33 +81,27 @@ namespace MSoro_AragonSkills.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Ficha([Bind(Include = "idPelicula,nombre,rating,posicion,reparto,voto,año,url_foto,url_imbd")] Peliculas pelicula)
         {
-            
-                if (ModelState.IsValid)
-                {
-                    bd.Entry(pelicula).State = EntityState.Modified;
-                    bd.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-                ViewBag.idPelicula = new SelectList(bd.Peliculas, "idPelicula", "nombre", pelicula.idPelicula);
-                return View(pelicula);
+
+            if (ModelState.IsValid)
+            {
+                bd.Entry(pelicula).State = EntityState.Modified;
+                bd.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            ViewBag.idPelicula = new SelectList(bd.Peliculas, "idPelicula", "nombre", pelicula.idPelicula);
+            return View(pelicula);
         }
         [HttpPost]
         [MultipleButton(Name = "action", Argument = "Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            if (@ViewBag.Eliminar==true) {
                 Peliculas pelicula = bd.Peliculas.Find(id);
                 bd.Peliculas.Remove(pelicula);
                 bd.SaveChanges();
                 return RedirectToAction("Index");
-            }
-            else
-            {
-                return View();
-            }
         }
-
     }
+    
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public class MultipleButtonAttribute : ActionNameSelectorAttribute
     {
