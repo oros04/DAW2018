@@ -64,9 +64,9 @@
         <br />
         @foreach (var item in Model)
         {
-            <div class="row">
+            
                 <div style="width:15%;height:250px;  background-image: url(https://@item.url_foto); " class="btn btn-default">@Html.ActionLink("d", "Ficha", new { id = item.idPelicula })</div>
-            </div>
+          
         }
     </div>
 }

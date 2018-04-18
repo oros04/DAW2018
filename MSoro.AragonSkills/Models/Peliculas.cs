@@ -19,7 +19,6 @@ namespace MSoro_AragonSkills.Models
         public string rating { get; set; }
         public string posicion { get; set; }
         public string reparto { get; set; }
-        public string voto { get; set; }
         public string año { get; set; }
         public string url_foto { get; set; }
         public string url_imbd { get; set; }

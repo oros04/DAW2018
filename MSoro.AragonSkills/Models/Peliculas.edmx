@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PeliculasBDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PeliculasBDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Peliculas">
           <Key>
             <PropertyRef Name="idPelicula" />
@@ -14,7 +14,6 @@
           <Property Name="rating" Type="nchar" MaxLength="20" />
           <Property Name="posicion" Type="nchar" MaxLength="10" />
           <Property Name="reparto" Type="varchar" MaxLength="50" />
-          <Property Name="voto" Type="nchar" MaxLength="10" />
           <Property Name="año" Type="nchar" MaxLength="10" />
           <Property Name="url_foto" Type="nchar" MaxLength="300" />
           <Property Name="url_imbd" Type="nchar" MaxLength="300" />
@@ -22,8 +21,7 @@
         <EntityContainer Name="PeliculasBDModelStoreContainer">
           <EntitySet Name="Peliculas" EntityType="Self.Peliculas" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PeliculasBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -36,7 +34,6 @@
           <Property Name="rating" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="posicion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="reparto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="voto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="año" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="url_foto" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
           <Property Name="url_imbd" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
@@ -58,7 +55,6 @@
                 <ScalarProperty Name="rating" ColumnName="rating" />
                 <ScalarProperty Name="posicion" ColumnName="posicion" />
                 <ScalarProperty Name="reparto" ColumnName="reparto" />
-                <ScalarProperty Name="voto" ColumnName="voto" />
                 <ScalarProperty Name="año" ColumnName="año" />
                 <ScalarProperty Name="url_foto" ColumnName="url_foto" />
                 <ScalarProperty Name="url_imbd" ColumnName="url_imbd" />

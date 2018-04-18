@@ -79,7 +79,7 @@ namespace MSoro_AragonSkills.Controllers
         [HttpPost]
         [MultipleButton(Name = "action", Argument = "Update")]
         [ValidateAntiForgeryToken]
-        public ActionResult Ficha([Bind(Include = "idPelicula,nombre,rating,posicion,reparto,voto,año,url_foto,url_imbd")] Peliculas pelicula)
+        public ActionResult Ficha([Bind(Include = "idPelicula,nombre,rating,posicion,reparto,año,url_foto,url_imbd")] Peliculas pelicula)
         {
 
             if (ModelState.IsValid)
