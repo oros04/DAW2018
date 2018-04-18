@@ -1,0 +1,77 @@
+﻿@model MSoro_AragonSkills.Models.Peliculas
+@{
+    ViewBag.Title = "Ficha Pelicula";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div class="container">
+    <img src="~/Resources/jp.jpg" class="img-rounded" alt="Cinque Terre" style="float:left">
+
+    <label style="padding-left:20px" for="comment">Posicion Ranking:</label>
+    <input class="form-control" style="margin-left: 50px;" id="inputsm" type="text" />
+    <label style="padding-left:20px" for="comment">Puntuacion:</label>
+    <input class="form-control" style="margin-left: 50px;" id="inputsm" type="text" />
+    <label style="padding-left:20px" for="comment">Año:</label>
+    <input class="form-control" style="margin-left: 50px;" id="inputsm" type="text" />
+    <label style="padding-left:20px" for="comment">Reparto:</label>
+    <textarea class="form-control" style="min-width: 52%" rows="5" id="comment"></textarea>
+    <div style="padding-left:20px" class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary">Ver ficha en IMDB</button>
+            <button type="button" class="btn btn-secondary">Actualizar</button>
+            <button type="button" class="btn btn-secondary">Borrar</button>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Clientes</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.nombre)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.apellidos, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.apellidos, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.apellidos, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.telefono, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.telefono, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idordenador, "idordenador", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idordenador", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.idordenador, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
