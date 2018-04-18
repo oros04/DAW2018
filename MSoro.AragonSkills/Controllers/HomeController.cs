@@ -1,9 +1,10 @@
-﻿using MSoro.AragonSkills.Negocio.Modelo;
+﻿using MSoro_AragonSkills.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 
@@ -43,25 +44,65 @@ namespace MSoro_AragonSkills.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.url_imagen = "https://" + pelicula.url_foto;
+            ViewBag.url_pelicula = "https://www.imdb.com/"+pelicula.url_imbd;
             ViewBag.idPelicula = new SelectList(bd.Peliculas, "idPelicula", "nombre", pelicula.idPelicula);
             return View(pelicula);
         }
 
-        // POST: Clientes/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST:
+        // Para protegerse de ataques de publicación excesiva
         [HttpPost]
+        [MultipleButton(Name = "action", Argument = "Update")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idPelicula,nombre,rating,posicion,reparto,voto,año,url_foto,url_imbd")] Peliculas pelicula)
+        public ActionResult Ficha([Bind(Include = "idPelicula,nombre,rating,posicion,reparto,voto,año,url_foto,url_imbd")] Peliculas pelicula)
         {
-            if (ModelState.IsValid)
-            {
-                bd.Entry(pelicula).State = EntityState.Modified;
+            
+                if (ModelState.IsValid)
+                {
+                    bd.Entry(pelicula).State = EntityState.Modified;
+                    bd.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                ViewBag.idPelicula = new SelectList(bd.Peliculas, "idPelicula", "nombre", pelicula.idPelicula);
+                return View(pelicula);
+        }
+        [HttpPost]
+        [MultipleButton(Name = "action", Argument = "Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            if (@ViewBag.Eliminar==true) {
+                Peliculas pelicula = bd.Peliculas.Find(id);
+                bd.Peliculas.Remove(pelicula);
                 bd.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.idordenador = new SelectList(bd.Peliculas, "idPelicula", "nombre", pelicula.idPelicula);
-            return View(pelicula);
+            else
+            {
+                return View();
+            }
+        }
+
+    }
+    [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
+    public class MultipleButtonAttribute : ActionNameSelectorAttribute
+    {
+        public string Name { get; set; }
+        public string Argument { get; set; }
+
+        public override bool IsValidName(ControllerContext controllerContext, string actionName, MethodInfo methodInfo)
+        {
+            var isValidName = false;
+            var keyValue = string.Format("{0}:{1}", Name, Argument);
+            var value = controllerContext.Controller.ValueProvider.GetValue(keyValue);
+
+            if (value != null)
+            {
+                controllerContext.Controller.ControllerContext.RouteData.Values[Name] = Argument;
+                isValidName = true;
+            }
+
+            return isValidName;
         }
     }
 }
