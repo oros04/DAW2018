@@ -33,17 +33,7 @@ namespace MSoro_AragonSkills.Controllers
 
             return View(bd.Peliculas.ToList());
         }
-       
-        public ActionResult Search(Informacion info)
-        {
-            
-            if (!String.IsNullOrEmpty(info.busqueda))
-            {
-                return View(bd.Peliculas.Where(s => s.nombre.Contains(info.busqueda)));
-            }
-
-            return View(bd.Peliculas.ToList());
-        }
+      
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
